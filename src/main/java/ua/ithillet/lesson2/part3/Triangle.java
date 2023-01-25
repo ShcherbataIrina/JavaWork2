@@ -1,18 +1,21 @@
 package ua.ithillet.lesson2.part3;
 
 public class Triangle implements Area{
-    private int sideA;
-    private int sideB;
-    private int sideC;
+    private final int sideA;
+    private final int sideB;
+    private final int sideC;
     private int p;
-    private float area;
-    public void areaTriangle(int sideA, int sideB, int sideC){
-    p= (sideA + sideB + sideC)/2;
-    area= (float) Math.sqrt(p*(p-sideA)*(p-sideB)*(p-sideC));
 
+    public Triangle(int sideA, int sideB, int sideC) {
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.sideC = sideC;
     }
+
     @Override
-    public void areaFigure() {
-        System.out.printf("\nПлоща трикутника %f", area );
+    public float areaFigure() {
+        p= (sideA + sideB + sideC)/2;
+        return (float) Math.sqrt(p*(p-sideA)*(p-sideB)*(p-sideC));
+
     }
 }

@@ -14,7 +14,6 @@ public class Circle implements Area{
     @Override
     public float areaFigure() {
         return   radius * radius  * PI;
-
     }
 
 
